@@ -15,7 +15,7 @@ uploaded_file = st.file_uploader("Upload Image", type=["png", "jpg", "jpeg"])
 def call_openai_vision(image_bytes):
     base64_img = image_bytes.getvalue()
     response = openai.chat.completions.create(
-        model="gpt-4-vision-preview",
+        model="gpt-4o",
         messages=[
             {"role": "system", "content": "You are a helpful assistant that extracts handwritten ledger data from images into clean tabular format."},
             {
